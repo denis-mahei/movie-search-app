@@ -1,7 +1,5 @@
 // import { fetchMovies } from '../tmdb-api.js';
 
-import { useState } from 'react';
-
 const MoviesPage = () => {
   // const [value, setValue] = useState({
   //   query: '',

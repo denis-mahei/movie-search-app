@@ -13,3 +13,11 @@ export const fetchTrendingMovies = async () => {
 
   return response.data.results;
 };
+
+export const fetchMovieDetails = async (movieId) => {
+  const response = await axios.get(
+    `https://api.themoviedb.org/3/movie/${movieId}`,
+    options
+  );
+  return response.data;
+};
