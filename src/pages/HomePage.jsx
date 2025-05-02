@@ -20,7 +20,9 @@ const HomePage = () => {
 
   return (
     <main>
-      <h1 style={{ margin: '16px 0 16px', color: '#90cea1' }}>
+      <h1
+        style={{ margin: '16px 0 16px', color: '#90cea1', textAlign: 'center' }}
+      >
         Trending today
       </h1>
       {movies.length > 0 && <MovieList items={movies} />}
