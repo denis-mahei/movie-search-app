@@ -28,6 +28,13 @@
 .castItem p {
     margin: 4px 0;
     font-size: 14px;
+    color: #fdfdfd;
+}
+
+.castItem h4 {
+    margin: 4px 0;
+    font-weight: 700;
+    color: #90cea1;
 }
 
 .char {

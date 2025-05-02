@@ -31,7 +31,7 @@ const MovieCast = () => {
             height="150"
           />
 
-          <p>{item.name}</p>
+          <h4>{item.name}</h4>
           <p className={css.char}>Character: {item.character}</p>
         </li>
       ))}

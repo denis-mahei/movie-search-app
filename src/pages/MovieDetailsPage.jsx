@@ -9,7 +9,7 @@ const MovieDetailsPage = () => {
   const { movieId } = useParams();
   const [movie, setMovie] = useState(null);
   const location = useLocation();
-  const goBackLink = location.state ?? '/';
+  const goBackLink = location.state ?? '/movies';
 
   useEffect(() => {
     async function getDetail() {

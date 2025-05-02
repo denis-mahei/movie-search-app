@@ -2,7 +2,7 @@ import { Suspense, lazy } from 'react';
 import css from './App.module.css';
 import { Navigation } from './Navigation/Navigation.jsx';
 import { Route, Routes } from 'react-router-dom';
-// import NotFoundPage from '../pages/NotFoundPage.jsx';
+import NotFoundPage from '../pages/NotFoundPage.jsx';
 
 const HomePage = lazy(() => import('../pages/HomePage.jsx'));
 const MoviesPage = lazy(() => import('../pages/MoviesPage.jsx'));
@@ -22,6 +22,7 @@ const App = () => {
             <Route path="cast" element={<MovieCast />} />
             <Route path="review" element={<MovieReview />} />
           </Route>
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Suspense>
     </div>

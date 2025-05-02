@@ -1,11 +1,26 @@
 import css from './SearchMovie.module.css';
+import { useState } from 'react';
 
-const SearchMovie = () => {
+const SearchMovie = ({ onSearch }) => {
+  const [query, setQuery] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (query.trim()) {
+      onSearch(query);
+    }
+
+    setQuery('');
+  };
+
   return (
-    <form className={css.form}>
+    <form className={css.form} onSubmit={handleSubmit}>
       <input
         type="text"
         name="search"
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
         autoFocus
         autoComplete="off"
         className={css.field}

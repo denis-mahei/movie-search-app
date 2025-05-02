@@ -16,7 +16,7 @@ const MovieMainInfo = ({ movie }) => {
         </h2>
         <h3 className={css.overview}>Overview</h3>
         <p className={css.text}>{movie.overview}</p>
-        <h3 className={css.overview}>Genres:</h3>
+        <h3 className={css.overview}>Genres</h3>
         <ul className={css.genresList}>
           {movie.genres.map((item) => (
             <li key={item.id} className={css.genresItem}>
