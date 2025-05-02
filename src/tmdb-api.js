@@ -1,11 +1,12 @@
 import axios from 'axios';
 
 const url = 'https://api.themoviedb.org/3';
+const token = import.meta.env.VITE_TMDB_TOKEN;
 const options = {
   include_adult: false,
   headers: {
     accept: 'application/json',
-    Authorization: import.meta.env.VITE_TMDB_TOKEN,
+    Authorization: token,
   },
 };
 
