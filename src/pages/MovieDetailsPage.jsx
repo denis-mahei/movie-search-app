@@ -1,17 +1,20 @@
-import { Link, useParams, Outlet } from 'react-router-dom';
-import { fetchMovieDetails } from '../tmdb-api.js';
-import { useEffect, useState } from 'react';
-import MoviesCast from '../components/MovieCast/MoviesCast.jsx';
+import { Link, useParams, Outlet, useLocation } from 'react-router-dom';
+import { fetchData } from '../tmdb-api.js';
+import { Suspense, useEffect, useState } from 'react';
+import GoBack from '../components/GoBack/GoBack.jsx';
+import Details from '../components/Details/Details.jsx';
+import MovieMainInfo from '../components/MovieMainInfo/MovieMainInfo.jsx';
 
 const MovieDetailsPage = () => {
-  const [isActive, setIsActive] = useState(false);
   const { movieId } = useParams();
   const [movie, setMovie] = useState(null);
+  const location = useLocation();
+  const goBackLink = location.state ?? '/';
 
   useEffect(() => {
     async function getDetail() {
       try {
-        const data = await fetchMovieDetails(movieId);
+        const data = await fetchData(`/movie/${movieId}`);
         setMovie(data);
       } catch (e) {
         console.log(e);
@@ -22,22 +25,26 @@ const MovieDetailsPage = () => {
   }, [movieId]);
 
   return (
-    <div>
+    <main>
       {movie && (
         <>
-          <h1>{movie.title}</h1>
-          <ul>
+          <GoBack to={goBackLink}>Go back</GoBack>
+          <MovieMainInfo movie={movie} />
+          <Details>
             <li>
               <Link to="cast">Cast</Link>
             </li>
             <li>
               <Link to="review">Review</Link>
             </li>
-          </ul>
-          <Outlet />
+          </Details>
         </>
       )}
-    </div>
+
+      <Suspense fallback={<div>Loading ...</div>}>
+        <Outlet />
+      </Suspense>
+    </main>
   );
 };
 export default MovieDetailsPage;

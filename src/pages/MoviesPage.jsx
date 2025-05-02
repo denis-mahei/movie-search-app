@@ -1,32 +1,18 @@
 // import { fetchMovies } from '../tmdb-api.js';
 
+import SearchMovie from '../components/SearchMovie/SearchMovie.jsx';
+
 const MoviesPage = () => {
-  // const [value, setValue] = useState({
-  //   query: '',
-  // });
-  //
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //
-  //   const form = e.target.value;
-  //
-  //   setValue({
-  //     ...value,
-  //     query: form,
-  //   });
-  //   console.log(form);
-  // };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+  };
 
   return (
-    <form>
-      <input
-        type="text"
-        name="query"
-        // value={value.query}
-        // onChange={handleSubmit}
-      />
-      <button type="submit">Search</button>
-    </form>
+    <>
+      <SearchMovie />
+    </>
   );
 };
 export default MoviesPage;
