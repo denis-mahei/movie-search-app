@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { fetchData } from '../tmdb-api.js';
 import MovieList from '../components/MovieList/MovieList.jsx';
+import { toast, Toaster } from 'react-hot-toast';
 
 const HomePage = () => {
   const [movies, setMovies] = useState([]);
@@ -11,7 +12,7 @@ const HomePage = () => {
         const data = await fetchData('/trending/movie/day');
         setMovies(data.results);
       } catch (e) {
-        console.log(e);
+        toast.error('Oops! Something went wrong!');
       }
     }
 
@@ -25,6 +26,7 @@ const HomePage = () => {
       >
         Trending today
       </h1>
+      <Toaster position="top-right" />
       {movies.length > 0 && <MovieList items={movies} />}
     </main>
   );

@@ -1,5 +1,5 @@
-import css from './SearchMovie.module.css';
 import { useState } from 'react';
+import css from './SearchMovie.module.css';
 
 const SearchMovie = ({ onSearch }) => {
   const [query, setQuery] = useState('');
@@ -21,7 +21,6 @@ const SearchMovie = ({ onSearch }) => {
         name="search"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        autoFocus
         autoComplete="off"
         className={css.field}
       />

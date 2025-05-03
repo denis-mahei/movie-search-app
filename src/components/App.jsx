@@ -1,14 +1,15 @@
 import { Suspense, lazy } from 'react';
-import css from './App.module.css';
 import { Navigation } from './Navigation/Navigation.jsx';
 import { Route, Routes } from 'react-router-dom';
 import NotFoundPage from '../pages/NotFoundPage.jsx';
+import css from './App.module.css';
 
 const HomePage = lazy(() => import('../pages/HomePage.jsx'));
 const MoviesPage = lazy(() => import('../pages/MoviesPage.jsx'));
 const MoviesDetailsPage = lazy(() => import('../pages/MovieDetailsPage.jsx'));
 const MovieCast = lazy(() => import('./MovieCast/MovieCast.jsx'));
-const MovieReview = lazy(() => import('./MovieReview/MovieReview.jsx'));
+const MovieReview = lazy(() => import('./MovieReviews/MovieReviews.jsx'));
+
 const App = () => {
   return (
     <div className={css.container}>

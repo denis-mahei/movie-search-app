@@ -1,11 +1,13 @@
 import { fetchData } from '../tmdb-api.js';
-
-import SearchMovie from '../components/SearchMovie/SearchMovie.jsx';
 import { useEffect, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import MovieList from '../components/MovieList/MovieList.jsx';
+import SearchMovie from '../components/SearchMovie/SearchMovie.jsx';
+import { toast, Toaster } from 'react-hot-toast';
 
 const MoviesPage = () => {
-  const [searchMovie, setSearchMovie] = useState('');
+  const [searchParams, setSearchParams] = useSearchParams();
+  const searchMovie = searchParams.get('query') || '';
   const [results, setResults] = useState([]);
 
   useEffect(() => {
@@ -22,12 +24,13 @@ const MoviesPage = () => {
   }, [searchMovie]);
 
   const handleSearch = (query) => {
-    setSearchMovie(query);
+    setSearchParams({ query });
   };
   return (
     <>
       <SearchMovie onSearch={handleSearch} />
       <MovieList items={results} />
+      <Toaster position="top-right" reverseOrder={false} />
     </>
   );
 };

@@ -1,10 +1,10 @@
 import { fetchData } from '../../tmdb-api.js';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Reviews from '../Reviews/Reviews.jsx';
 import { HashLoader } from 'react-spinners';
+import Reviews from '../Reviews/Reviews.jsx';
 
-const MovieReview = () => {
+const MovieReviews = () => {
   const [reviews, setReviews] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -39,4 +39,4 @@ const MovieReview = () => {
     </>
   );
 };
-export default MovieReview;
+export default MovieReviews;
