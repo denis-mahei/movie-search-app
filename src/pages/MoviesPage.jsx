@@ -16,6 +16,7 @@ const MoviesPage = () => {
         const response = await fetchData(`/search/movie?query=${searchMovie}`);
         setResults(response.results);
       } catch (e) {
+        toast.error('Not found!');
         console.log(e);
       }
     }

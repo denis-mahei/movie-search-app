@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import css from './SearchMovie.module.css';
+import css from './SearchMovie.module.scss';
 
 const SearchMovie = ({ onSearch }) => {
   const [query, setQuery] = useState('');

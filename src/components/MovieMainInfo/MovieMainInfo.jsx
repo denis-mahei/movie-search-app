@@ -1,5 +1,5 @@
 import { parseISO, format } from 'date-fns';
-import css from './MovieMainInfo.module.css';
+import css from './MovieMainInfo.module.scss';
 
 const MovieMainInfo = ({ movie }) => {
   return (

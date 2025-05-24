@@ -2,7 +2,6 @@ import { fetchData } from '../tmdb-api.js';
 import { Link, useParams, Outlet, useLocation } from 'react-router-dom';
 import { Suspense, useEffect, useRef, useState } from 'react';
 import { toast, Toaster } from 'react-hot-toast';
-import { ScaleLoader } from 'react-spinners';
 import GoBack from '../components/GoBack/GoBack.jsx';
 import Details from '../components/Details/Details.jsx';
 import MovieMainInfo from '../components/MovieMainInfo/MovieMainInfo.jsx';
