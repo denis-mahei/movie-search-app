@@ -1,18 +1,20 @@
+@use '../../styles/utils/_variables' as var;
+
 .header {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding: 15px 0;
-    border-bottom: 1px solid #90cea1;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px 0;
+  border-bottom: 1px solid #90cea1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .link {
-    padding: 5px 10px;
+  padding: 5px 10px;
 }
 
 .active {
-    background-color: #01b4e4;
-    border-radius: 5px;
+  background-color: var.$bg-color-blue;
+  border-radius: 5px;
 }
 

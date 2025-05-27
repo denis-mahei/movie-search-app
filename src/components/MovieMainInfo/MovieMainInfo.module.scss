@@ -1,34 +1,36 @@
+@use '../../styles/utils/_variables' as var;
+
 .main {
-    display: flex;
-    gap: 20px;
-    border-bottom: 1px solid #90cea1;
-    padding-bottom: 1rem;
+  display: flex;
+  gap: 20px;
+  border-bottom: 1px solid #90cea1;
+  padding-bottom: 1rem;
 }
 
 .title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
 }
 
 .overview {
-    margin-bottom: .8rem;
-    font-weight: 700;
-    color: #90cea1;
+  margin-bottom: .8rem;
+  font-weight: 700;
+  color: var.$color-accent-green;
 }
 
 .text {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .genresList {
-    font-size: 1rem;
-    display: flex;
-    gap: 16px;
+  font-size: 1rem;
+  display: flex;
+  gap: 16px;
 }
 
 .genresItem {
-    font-weight: 800;
-    text-transform: uppercase;
-    color: #01b4e4;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var.$color-accent-blue;
 }

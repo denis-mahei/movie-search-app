@@ -1,28 +1,31 @@
+@use '../../styles/utils/_variables' as var;
+
 .form {
-    display: flex;
-    justify-content: center;
-    gap: .8rem;
-    margin-top: 1rem;
-    height: 32px;
+  display: flex;
+  justify-content: center;
+  gap: .8rem;
+  margin-top: 1rem;
+  height: 32px;
 }
 
 .field {
-    width: 20rem;
-    outline: none;
-    border: 1px solid #90cea1;
-    border-radius: .3rem;
-    background-color: transparent;
-    padding: 8px 16px;
+  width: 20rem;
+  outline: none;
+  border: 1px solid #90cea1;
+  border-radius: .3rem;
+  background-color: transparent;
+  padding: 8px 16px;
+  color: var.$color-text;
 
-    &:focus {
-        border-color: #01b4e4;
-    }
+  &:focus {
+    border-color: #01b4e4;
+  }
 }
 
 .searchBtn {
-    display: block;
-    background-color: #01b4e4;
-    border-radius: .3rem;
-    border: none;
-    padding: 8px 10px;
+  display: block;
+  background-color: #01b4e4;
+  border-radius: .3rem;
+  border: none;
+  padding: 8px 10px;
 }
