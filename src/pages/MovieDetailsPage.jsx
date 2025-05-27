@@ -5,20 +5,25 @@ import { toast, Toaster } from 'react-hot-toast';
 import GoBack from '../components/GoBack/GoBack.jsx';
 import Details from '../components/Details/Details.jsx';
 import MovieMainInfo from '../components/MovieMainInfo/MovieMainInfo.jsx';
+import Loader from '../components/Loader/Loader.jsx';
 
 const MovieDetailsPage = () => {
   const { movieId } = useParams();
   const [movie, setMovie] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
   const location = useLocation();
   const goBackLink = useRef(location.state ?? '/movies');
 
   useEffect(() => {
     async function getDetail() {
       try {
+        setIsLoading(true);
         const data = await fetchData(`/movie/${movieId}`);
         setMovie(data);
       } catch (e) {
         toast.error('Oops! Something went wrong!');
+      } finally {
+        setIsLoading(false);
       }
     }
 
@@ -28,6 +33,7 @@ const MovieDetailsPage = () => {
   return (
     <main>
       <Toaster position="top-right" reverseOrder={false} />
+      {isLoading && <Loader />}
       {movie && (
         <>
           <GoBack to={goBackLink.current}>Go back</GoBack>
