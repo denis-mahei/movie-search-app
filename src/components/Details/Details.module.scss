@@ -1,16 +1,18 @@
+@use '../../styles/utils/_variables' as var;
+
 .links {
-    display: flex;
-    gap: 20px;
-    margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
 }
 
 .links li {
-    font-size: 1rem;
-    border-radius: 5px;
-    background-color: #01b4e4;
-    padding: 8px;
+  font-size: 1rem;
+  border-radius: 5px;
+  background-color: var.$bg-color-blue;
+  padding: 8px;
 }
 
 .links li:active {
-    color: #90cea1;
+  color: var.$color-accent-green;
 }
