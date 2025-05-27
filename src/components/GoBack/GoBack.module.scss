@@ -1,17 +1,19 @@
-.link {
-    font-size: 1.1rem;
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    padding: 8px 0;
-    color: #90cea1;
-    text-decoration: none;
-    font-weight: 800;
-    text-transform: uppercase;
-    transition: color .25s ease;
-    margin: .2rem;
+@use '../../styles/utils/_mixins' as *;
 
-    &:hover {
-        color: #01b4e4;
-    }
+.link {
+  font-size: 1.1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 0;
+  color: #90cea1;
+  text-decoration: none;
+  font-weight: 800;
+  text-transform: uppercase;
+  @include transition(color);
+  margin: .2rem;
+
+  &:hover {
+    color: #01b4e4;
+  }
 }

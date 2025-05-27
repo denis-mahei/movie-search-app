@@ -1,0 +1,13 @@
+@use './utils/variables';
+
+body {
+  font-family: variables.$font-main;
+  line-height: variables.$line-height-base;
+  font-weight: variables.$font-weight-normal;
+  color: variables.$color-text;
+  background-color: variables.$color-bg;
+}
+
+svg {
+  display: block;
+}
