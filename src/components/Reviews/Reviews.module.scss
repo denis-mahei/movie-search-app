@@ -1,8 +1,10 @@
+@use '../../styles/utils/_variables' as var;
+
 .user {
-    color: #90cea1;
-    margin-bottom: 10px;
+  color: var.$color-accent-green;
+  margin-bottom: 10px;
 }
 
 .content {
-    margin-bottom: 16px;
+  margin-bottom: 16px;
 }
