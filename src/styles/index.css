@@ -1,13 +1,13 @@
-@use 'variables.css';
+@import './variables.css';
 
 body {
-  font-family: variables.$font-main;
-  line-height: variables.$line-height-base;
-  font-weight: variables.$font-weight-normal;
-  color: variables.$color-text;
-  background-color: variables.$color-bg;
+    font-family: var(--font-main), sans-serif;
+    line-height: var(--line-height-base);
+    font-weight: var(--font-weight-normal);
+    color: var(--color-text);
+    background-color: var(--color-bg);
 }
 
 svg {
-  display: block;
+    display: block;
 }

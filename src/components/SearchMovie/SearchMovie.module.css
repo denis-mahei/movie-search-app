@@ -1,31 +1,30 @@
-@use '../../styles/variables.css' as var;
-@use '../../styles/utils/_mixins' as mix;
-
 .form {
-  @include mix.flex-center;
-  gap: .8rem;
-  margin-top: 1rem;
-  height: 32px;
+    display: flex;
+    justify-content: center;
+
+    gap: .8rem;
+    margin-top: 1rem;
+    height: 32px;
 }
 
 .field {
-  width: 20rem;
-  outline: none;
-  border: 1px solid var.$color-accent-green;
-  border-radius: .3rem;
-  background-color: transparent;
-  padding: 8px 16px;
-  color: var.$color-text;
+    width: 20rem;
+    outline: none;
+    border: 1px solid var(--color-accent-green);
+    border-radius: .3rem;
+    background-color: transparent;
+    padding: 8px 16px;
+    color: var(--color-text);
 
-  &:focus {
-    border-color: var.$color-accent-blue;
-  }
+    &:focus {
+        border-color: var(--color-accent-blue);
+    }
 }
 
 .searchBtn {
-  display: block;
-  background-color: var.$bg-color-blue;
-  border-radius: .3rem;
-  border: none;
-  padding: 8px 10px;
+    display: block;
+    background-color: var(--color-accent-blue);
+    border-radius: .3rem;
+    border: none;
+    padding: 8px 10px;
 }

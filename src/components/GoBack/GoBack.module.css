@@ -1,21 +1,18 @@
-@use '../../styles/utils/_mixins' as mix;
-@use '../../styles/variables.css' as var;
-
 .link {
-  font-size: 1.1rem;
-  display: flex;
-  align-items: center;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
 
-  gap: 4px;
-  padding: 8px 0;
-  color: var.$color-accent-green;
-  text-decoration: none;
-  font-weight: 800;
-  text-transform: uppercase;
-  @include mix.transition(color);
-  margin: .2rem;
+    gap: 4px;
+    padding: 8px 0;
+    color: var(--color-accent-green);
+    text-decoration: none;
+    font-weight: 800;
+    text-transform: uppercase;
+    transition: color .25s ease-in;
+    margin: .2rem;
 
-  &:hover {
-    color: var.$color-accent-blue;
-  }
+    &:hover {
+        color: var(--color-accent-blue);
+    }
 }

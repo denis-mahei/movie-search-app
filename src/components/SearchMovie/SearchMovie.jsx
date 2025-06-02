@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import css from './SearchMovie.module.css';
+import { toast } from 'react-hot-toast';
 
 const SearchMovie = ({ onSearch }) => {
   const [query, setQuery] = useState('');
@@ -7,6 +8,9 @@ const SearchMovie = ({ onSearch }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    if (query === '') {
+      toast.error('Please enter a search query');
+    }
     if (query.trim()) {
       onSearch(query);
     }

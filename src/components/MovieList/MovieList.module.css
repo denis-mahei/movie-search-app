@@ -1,40 +1,39 @@
-@use '../../styles/utils/_mixins' as mix;
-@use '../../styles/variables.css' as var;
-
 .container {
-  @include mix.flex-center;
-  flex-wrap: wrap;
-  gap: 24px;
+    display: flex;
+    justify-content: center;
+
+    flex-wrap: wrap;
+    gap: 24px;
 
 }
 
 .movieCard {
-  display: flex;
-  justify-content: center;
-  max-width: 180px;
-  height: 310px;
-  background-color: #041d31;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  border-radius: 4px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, color .2s ease;
+    display: flex;
+    justify-content: center;
+    max-width: 180px;
+    height: 310px;
+    background-color: #041d31;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, color .2s ease;
 
-  &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-    color: var.$color-accent-blue;
-  }
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        color: var(--color-accent-blue);
+    }
 
 }
 
 .title {
-  font-family: 'Inter', sans-serif;
-  display: block;
-  font-weight: 400;
-  font-size: 1rem;
-  margin-top: 5px;
-  overflow: hidden;
-  text-align: center;
-  padding: 5px;
-  min-height: 50px;
-  color: var.$color-text;
+    font-family: 'Inter', sans-serif;
+    display: block;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-top: 5px;
+    overflow: hidden;
+    text-align: center;
+    padding: 5px;
+    min-height: 50px;
+    color: var(--color-text);
 }

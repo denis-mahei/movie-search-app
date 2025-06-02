@@ -1,18 +1,17 @@
-@use '../../styles/variables.css' as var;
 
 .links {
-  display: flex;
-  gap: 20px;
-  margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
 }
 
 .links li {
-  font-size: 1rem;
-  border-radius: 5px;
-  background-color: var.$bg-color-blue;
-  padding: 8px;
+    font-size: 1rem;
+    border-radius: 5px;
+    background-color: var(--color-bg);
+    padding: 8px;
 }
 
 .links li:active {
-  color: var.$color-accent-green;
+    color: var(--color-accent-green);
 }
