@@ -1,4 +1,4 @@
-@use '../../styles/utils/_variables' as var;
+@use '../../styles/variables.css' as var;
 @use '../../styles/utils/_mixins' as mix;
 
 .form {

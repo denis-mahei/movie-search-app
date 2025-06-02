@@ -1,6 +1,6 @@
 import { IoMdArrowRoundBack } from 'react-icons/io';
 import { Link } from 'react-router-dom';
-import css from './GoBack.module.scss';
+import css from './GoBack.module.css';
 
 const GoBack = ({ to, children }) => {
   return (

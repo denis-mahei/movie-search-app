@@ -2,7 +2,7 @@ import { Suspense, lazy } from 'react';
 import { Navigation } from './Navigation/Navigation.jsx';
 import { Route, Routes } from 'react-router-dom';
 import NotFoundPage from '../pages/NotFoundPage.jsx';
-import css from './App.module.scss';
+import css from './App.module.css';
 import Loader from './Loader/Loader.jsx';
 
 const HomePage = lazy(() => import('../pages/HomePage.jsx'));
