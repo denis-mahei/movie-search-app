@@ -1,10 +1,10 @@
-import { fetchData } from '../tmdb-api.js';
+import { fetchData } from '@srv/tmdb-api.js';
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import MovieList from '../components/MovieList/MovieList.jsx';
-import SearchMovie from '../components/SearchMovie/SearchMovie.jsx';
+import MovieList from '@/MovieList/MovieList.jsx';
+import SearchMovie from '@/SearchMovie/SearchMovie.jsx';
 import { toast, Toaster } from 'react-hot-toast';
-import Loader from '../components/Loader/Loader.jsx';
+import Loader from '@/Loader/Loader.jsx';
 
 const MoviesPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();

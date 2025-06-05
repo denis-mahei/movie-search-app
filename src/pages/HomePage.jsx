@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import { fetchData } from '../tmdb-api.js';
-import MovieList from '../components/MovieList/MovieList.jsx';
+import { fetchData } from '@srv/tmdb-api.js';
+import MovieList from '@/MovieList/MovieList.jsx';
 import { toast, Toaster } from 'react-hot-toast';
-import Loader from '../components/Loader/Loader.jsx';
+import Loader from '@/Loader/Loader.jsx';
 
 const HomePage = () => {
   const [movies, setMovies] = useState([]);

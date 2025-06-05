@@ -7,4 +7,10 @@ export default defineConfig({
   build: {
     sourcemap: true,
   },
+  resolve: {
+    alias: {
+      '@srv': new URL('./src', import.meta.url),
+      '@': new URL('./src/components', import.meta.url),
+    },
+  },
 });

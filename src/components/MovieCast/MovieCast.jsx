@@ -1,4 +1,4 @@
-import { fetchData } from '../../tmdb-api.js';
+import { fetchData } from '@srv/tmdb-api.js';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import css from './MovieCast.module.css';
