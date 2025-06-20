@@ -24,4 +24,4 @@ A dynamic and user-friendly movie search application built with **React**, power
 
 ## 🔗 Live Demo
 
-[movie-search-app.app](goit-react-hw-05-lake-eta.vercel.app/)
+[🎬movie-search-app.app](https://goit-react-hw-05-lake-eta.vercel.app/)
